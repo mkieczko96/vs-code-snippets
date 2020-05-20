@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>XUnit Test Method</Title>
+      <Shortcut>xunitm</Shortcut>
+      <Description>Inserts XUnit test method.</Description>
+      <Author>Mateusz Kieczkowski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Xunit</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>FactMethod</ID>
+          <Function>SimpleTypeName(global::Xunit.Fact)</Function>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <Default>MyMethod</Default>
+          <ToolTip>Replace with the name of the test method</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[$FactMethod$]
+        public void $name$Test() 
+        {
+            throw new NotImplementedException();$end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
